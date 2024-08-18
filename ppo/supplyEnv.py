@@ -47,7 +47,7 @@ class POMultiAgent1W1F(MultiAgentEnv):
         self.c = 2 
         self.h = 2 
         self.b = 5
-        self.s = [100,200]
+        self.s = [200,100]
         self.re_num = 0
         self.days =  {1: self.periods, 2:self.periods}
         self._seed() 
