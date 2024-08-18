@@ -185,7 +185,7 @@ class POMultiAgent1W1F(MultiAgentEnv):
             #     I[0] = total_inventory_retailer
                 
             # SO[0] = 0
-            if d < I[0]:
+            if d > I[0]:
                 SO[0] = d-I[0]
                 I[0] = 0
                 # BL[1] = 0
@@ -294,7 +294,7 @@ class POMultiAgent1W1F(MultiAgentEnv):
         self.total_steps += 1
         
  
-        observations_dict = self.transition(obs_dict, actions[1][0], actions[2][0],actions[2][2], demand) 
+        observations_dict = self.transition(obs_dict, actions[2][0], actions[1][0],actions[2][2], demand) 
 
  
         
