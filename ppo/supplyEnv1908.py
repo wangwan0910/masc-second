@@ -107,7 +107,7 @@ class POMultiAgent1W1F(MultiAgentEnv):
     def transition(self,agent_ids, x, a_factory, a_retailer,V_F,d): 
         # print('xxxxxxxxxxxxxxxxxxxxxxxx',x)
         # self.o_history.append(a_retailer) 
-        self.o_history.append(np.array([[a_retailer]], dtype=np.float32))
+        self.o_history.append(np.array([[a_retailer]], dtype=np.int64))
         o_history = np.hstack(list(chain(*chain(*self.o_history))))
         ### x[0]:retaler, x[1]:factory,
          ### state[1]:retaler, state[2]:factory
@@ -222,7 +222,7 @@ class POMultiAgent1W1F(MultiAgentEnv):
             BL[0] = 0
             I[0] = 0
             
-        self.d_history.append(np.array([[d]], dtype=np.float32))
+        self.d_history.append(np.array([[d]], dtype=np.int64))
         d_history = np.hstack(list(chain(*chain(*self.d_history))))
            
         self.period +=1
