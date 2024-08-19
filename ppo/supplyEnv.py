@@ -37,7 +37,7 @@ class POMultiAgent1W1F(MultiAgentEnv):
         retailer_capacity = self.retailer_capacity 
         price_capacity = self.price_capacity 
         self.v_f = 2 # 1:the factory does not show its stock; 2:factory can choose to show its stock or not.
-        self.action_space = MultiDiscrete([retailer_capacity,price_capacity,self.v_f])  #[order , price, show]
+        self.action_space = MultiDiscrete([factory_capacity,price_capacity,self.v_f])  #[order , price, show]
         self.periods = 30 #simulation days
         self.observation_space = MultiDiscrete([factory_capacity,factory_capacity,factory_capacity,factory_capacity,factory_capacity,factory_capacity,factory_capacity,self.periods]) # [inventory,backlog,stockout,Factory_inventory]
         self.state =  {1:np.array([10,0,0,0,0,0,0,0]), 2: np.array([10,0,0,0,0,0,0,0])}  # an state example
