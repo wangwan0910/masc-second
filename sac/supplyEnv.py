@@ -41,14 +41,14 @@ class POMultiAgent1W1F(MultiAgentEnv):
         high_act[0] = self.retailer_capacity
         high_act[1] = self.price_capacity
         high_act[2] = self.v_f
-        self.action_space = Box(low=low_act, high=high_act, dtype=np.float32)
+        self.action_space = Box(low=low_act, high=high_act,seed=2024, dtype=np.float32)
         #self.action_space = MultiDiscrete([retailer_capacity + 1,price_capacity+1,self.v_f])  #[order , price, show]
         self.periods = 30 #simulation days
         low_obs = np.zeros((8,), dtype=np.float32)
         high_obs = np.zeros((8,), dtype=np.float32)
         high_obs[:factory_size*7] = factory_capacity
         high_obs[factory_size*7:factory_size*7+1] = self.periods
-        self.observation_space = Box(low=low_obs, high=high_obs, dtype=np.float32)
+        self.observation_space = Box(low=low_obs, high=high_obs,seed=2024, dtype=np.float32)
         #self.observation_space = MultiDiscrete([factory_capacity+1,factory_capacity+1,factory_capacity+1,factory_capacity+1,factory_capacity+1,factory_capacity+1,factory_capacity+1,self.periods+1]) # [inventory,backlog,stockout,Factory_inventory]
         self.state =  {1:np.array([10,0,0,0,0,0,0,0]), 2: np.array([10,0,0,0,0,0,0,0])}  # an state example
         self.r = {1:0, 2:0} 
