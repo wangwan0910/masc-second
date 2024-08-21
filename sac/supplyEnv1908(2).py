@@ -380,7 +380,7 @@ class POMultiAgent1W1F(MultiAgentEnv):
         # print(f"Data saved to {filename} successfully!")
     
 
-        return observations_dict, processed_rewards, self.done, self.info 
+        return observations_dict, processed_rewards, self.done, percents 
     
 
     def get_processed_reward(self,rewards):
@@ -393,9 +393,9 @@ class POMultiAgent1W1F(MultiAgentEnv):
     
     
     def is_done(self, agent_id): 
-        #if self.stockoutCount[agent_id] >= self.stockoutCountS[agent_id] or self.day[agent_id] >= self.days[agent_id]:
+        if self.stockoutCount[agent_id] >= self.stockoutCountS[agent_id] or self.day[agent_id] >= self.days[agent_id]:
          #   print(' self.stockoutCount[agent_id]', self.stockoutCount[agent_id])
-        if self.day[agent_id] >= self.days[agent_id]:
+        #if self.day[agent_id] >= self.days[agent_id]:
             done = True
         else:
             done = False
