@@ -486,6 +486,11 @@ class POMultiAgent1W1F(MultiAgentEnv):
         #     done == {1: False ,2: False} 
         # self.info = {1: {'obs': np.array([20, 0, 0])}, 2: {'obs': np.array([50, 0, 0])}}
         self.days = {1: self.periods, 2: self.periods}
+        self.agent1_action_1_count = 0
+        self.agent1_action_0_count = 0
+        self.agent2_action_1_count = 0
+        self.agent2_action_0_count = 0
+        self.total_steps = 0 
       
         # self.info = {1: {'retalier obs': np.array([10,0,0,0])}, 2: {'factory obs': np.array([20,0,0,0])}} 
         # for episode_num in range(1, 5):
@@ -571,14 +576,14 @@ class POMultiAgent1W1F(MultiAgentEnv):
 
             for i in range(2):
                 ax = fig.add_subplot(5, 2, i + 9)
-                percent_labels = [p[i+1] for p in self.percent_history[start:end]]
-                percent_label_str = ', '.join(percent_labels[-1]) if percent_labels else 'N/A'
+                count_of_ones = sum(1 for a in self.action_history[start:end] if a[i+1][2] == 1)
+                count_1_percent = (count_of_ones/(end-start))*100
                 ax.plot(range(start , end),[a[i+1][2] for a in self.action_history[start:end]],
-                        label=f'Precent ({percent_label_str})',
+                        label=f'Precent {count_1_percent}',
                         color='mediumslateblue',alpha=0.5,linestyle='--', linewidth=0.73)
                 ax.legend(loc='upper left', fontsize='medium', markerscale=0.5)
                 if i == 0:
-                    ax.set_ylabel('Precent', fontsize='medium')
+                    ax.set_ylabel('Percent', fontsize='medium')
                 ax.set_xlabel('Step')
 
           
