@@ -364,7 +364,7 @@ class POMultiAgent1W1F(MultiAgentEnv):
         1: np.array([f"{agent1_percentage_1:.4f}%"]),
         2: np.array([f"{agent2_percentage_1:.4f}%"])
     }
-        print("precents",percents)
+        print("percent",percents)
         
         self.percent_history.append(percents.copy())
         # print(" self.precent_history", self.precent_history)
@@ -579,7 +579,7 @@ class POMultiAgent1W1F(MultiAgentEnv):
                 count_of_ones = sum(1 for a in self.action_history[start:end] if a[i+1][2] == 1)
                 count_1_percent = (count_of_ones/(end-start))*100
                 ax.plot(range(start , end),[a[i+1][2] for a in self.action_history[start:end]],
-                        label=f'Precent {count_1_percent}',
+                        label=f'Percent {count_1_percent}',
                         color='mediumslateblue',alpha=0.5,linestyle='--', linewidth=0.73)
                 ax.legend(loc='upper left', fontsize='medium', markerscale=0.5)
                 if i == 0:
