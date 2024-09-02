@@ -1,4 +1,4 @@
-### Multi-Agent Decision Making in Non-Stationary Supply Chains Environments 
+## Multi-Agent Decision Making in Non-Stationary Supply Chains Environments 
 
  The code of the paper `Multi-Agent Decision Making in Non-Stationary Supply Chains Environments ` is presented at this repository.
 
@@ -12,9 +12,9 @@ conda activate masc
 pip install torch, tensorflow
 ```
 Note that this code does work with TensorFlow 2+. 
-## Paper citation
+### Paper citation
 
-## How to Run
+### How to Run
 For "PPO", you can start the training with
 ```
 python BS1P1F.py --env1
