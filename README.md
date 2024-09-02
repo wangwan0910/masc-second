@@ -13,3 +13,32 @@ pip install torch, tensorflow
 ```
 ### Note that this code does work with TensorFlow 2+. 
 ## Paper citation
+
+## How to Run
+For "PPO", you can start the training with
+```
+python BS1P1F.py --env1
+python BS1P1F.py --env2
+python BS1P1F.py --env3
+...
+```
+
+For "SAC", , you can start the training with
+```
+python SAC1P1F.py --env1
+python SAC1P1F.py --env2
+python SAC1P1F.py --env3
+...
+```
+
+
+## BibTeX
+
+```bibtex
+@article{,
+  title={},
+  author={},
+  journal={},
+  year={2024}
+}
+```
