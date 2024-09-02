@@ -23,7 +23,7 @@ python BS1P1F.py --env3
 ...
 ```
 
-For "SAC", , you can start the training with
+For "SAC", you can start the training with
 ```
 python SAC1P1F.py --env1
 python SAC1P1F.py --env2
