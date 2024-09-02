@@ -15,7 +15,7 @@ Note that this code does work with TensorFlow 2+.
 ### Paper citation
 
 ### How to Run
-For "PPO", you can start the training with
+For Discreate action/observation space "PPO", you can start the training with
 ```
 python BS1P1F.py --env1
 python BS1P1F.py --env2
@@ -23,7 +23,7 @@ python BS1P1F.py --env3
 ...
 ```
 
-For "SAC", you can start the training with
+For Continuous action/observation space "SAC", you can start the training with
 ```
 python SAC1P1F.py --env1
 python SAC1P1F.py --env2
