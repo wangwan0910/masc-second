@@ -23,18 +23,18 @@ python BS1P1F.py --env123plus
 For Continuous action/observation space "SAC",  you can start the training with Mixed environments
 ```
 python SAC1P1F-Mixed.py --env1
-python SAC1P1FF-Mixed.py --env2
-python SAC1P1FF-Mixed.py --env3
-python SAC1P1FF-Mixed.py --env123plus
+python SAC1P1F-Mixed.py --env2
+python SAC1P1F-Mixed.py --env3
+python SAC1P1F-Mixed.py --env123plus
 ...
 ```
 
 For Continuous action/observation space "SAC",  you can start the training with Lying environments
 ```
 python SAC1P1F-Lying.py --env1
-python SAC1P1FF-Lying.py --env2
-python SAC1P1FF-Lying.py --env3
-python SAC1P1FF-Lying.py --env123plus
+python SAC1P1F-Lying.py --env2
+python SAC1P1F-Lying.py --env3
+python SAC1P1F-Lying.py --env123plus
 ...
 ```
 
