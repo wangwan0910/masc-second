@@ -20,7 +20,7 @@ python BS1P1F.py --env123plus
 ...
 ```
 
-For Discreate action/observation space "PPO", and for Continuous action/observation space "SAC",  you can start the training with Mixed environments
+For Continuous action/observation space "SAC",  you can start the training with Mixed environments
 ```
 python SAC1P1F.py --env4
 python SAC1P1F.py --env5
