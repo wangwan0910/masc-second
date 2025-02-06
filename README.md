@@ -11,26 +11,28 @@ Note that this code does work with TensorFlow 2+.
 ### Paper citation
 
 ### How to Run
-For Discreate action/observation space "PPO", and for Continuous action/observation space "SAC", you can start the training with Competitive environments
+For Discreate action/observation space "PPO", and for Continuous action/observation space "SAC", you can start the training with No communication environments
 ```
 python BS1P1F.py --env1
 python BS1P1F.py --env2
 python BS1P1F.py --env3
+python BS1P1F.py --env123plus
 ...
 ```
 
-For Discreate action/observation space "PPO", and for Continuous action/observation space "SAC",  you can start the training with with Mix environments
+For Discreate action/observation space "PPO", and for Continuous action/observation space "SAC",  you can start the training with Mixed environments
 ```
 python SAC1P1F.py --env4
 python SAC1P1F.py --env5
 python SAC1P1F.py --env6
 ...
 ```
-For Discreate action/observation space "PPO", and for Continuous action/observation space "SAC",  you can start the training with with Cooperative environments
+For Discreate action/observation space "PPO", and for Continuous action/observation space "SAC",  you can start the training with Tust environments
 ```
 python SAC1P1F.py --env7
 python SAC1P1F.py --env8
 python SAC1P1F.py --env9
+python SAC1P1F.py --env789plus
 ...
 ```
 
