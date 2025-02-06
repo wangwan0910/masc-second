@@ -28,6 +28,17 @@ python SAC1P1FF-Mixed.py --env3
 python SAC1P1FF-Mixed.py --env123plus
 ...
 ```
+
+For Continuous action/observation space "SAC",  you can start the training with Lying environments
+```
+python SAC1P1F-Lying.py --env1
+python SAC1P1FF-Lying.py --env2
+python SAC1P1FF-Lying.py --env3
+python SAC1P1FF-Lying.py --env123plus
+...
+```
+
+
 For Discreate action/observation space "PPO", and for Continuous action/observation space "SAC",  you can start the training with Tust environments
 ```
 python SAC1P1F.py --env7
