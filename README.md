@@ -38,13 +38,4 @@ python SAC1P1F.py --env9
 ...
 ```
 
-### BibTeX
 
-#```bibtex
-#@article{,
-#  title={},
-#  author={},
-# journal={},
-#  year={2024}
-#}
-#```
